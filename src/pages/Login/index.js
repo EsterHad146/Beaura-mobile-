@@ -9,6 +9,9 @@ export default function Login() {
     const [senha, setSenha] = useState('');
     const [mostrarSenha, setMostrarSenha] = useState(false);
 
+    function navegarCadastro() {
+        navigation.navigate("Cadastro"); // Certifique-se de que o nome bate com o nome no Stack.Navigator
+    }
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Bem-vindo(a)!</Text>
@@ -47,7 +50,7 @@ export default function Login() {
 
             <Text style={styles.footerText}>Sua primeira vez por aqui?</Text>
             <TouchableOpacity
-                onPress={()=> navigation.navigate('Cadastro')}
+                onPress={navegarCadastro}
             >
                 <Text style={styles.registerText}>Cadastre-se agora</Text>
             </TouchableOpacity>
